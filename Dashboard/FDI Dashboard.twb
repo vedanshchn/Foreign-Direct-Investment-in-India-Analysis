@@ -1,0 +1,2683 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20242.24.0613.1930                               -->
+<workbook original-version='18.1' source-build='2024.2.0 (20242.24.0613.1930)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <_.fcp.AccessibleZoneTabOrder.true...AccessibleZoneTabOrder />
+    <_.fcp.AnimationOnByDefault.true...AnimationOnByDefault />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <_.fcp.MarkAnimation.true...MarkAnimation />
+    <_.fcp.ObjectModelEncapsulateLegacy.true...ObjectModelEncapsulateLegacy />
+    <_.fcp.ObjectModelExtractV2.true...ObjectModelExtractV2 />
+    <_.fcp.ObjectModelTableType.true...ObjectModelTableType />
+    <_.fcp.SchemaViewerObjectModel.true...SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+    <ZoneFriendlyName />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <_.fcp.AnimationOnByDefault.false...style>
+    <_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule element='animation'>
+      <_.fcp.AnimationOnByDefault.false...format attr='animation-on' value='ao-on' />
+    </_.fcp.AnimationOnByDefault.false..._.fcp.MarkAnimation.true...style-rule>
+  </_.fcp.AnimationOnByDefault.false...style>
+  <datasources>
+    <datasource caption='fdi_sectors+ (2)' inline='true' name='federated.0gswo231szr2gt11vxyh20taprwd' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fdi_sectors' name='textscan.0wy0b6x08yxfjx19s6x810m6bpdl'>
+            <connection class='textscan' directory='C:/Users/Vedansh Chauhan/Documents/I2/Project 5' filename='fdi_sectors.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0wy0b6x08yxfjx19s6x810m6bpdl' name='fdi_sectors.csv' table='[fdi_sectors#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Sector' ordinal='0' />
+            <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+            <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0wy0b6x08yxfjx19s6x810m6bpdl' name='fdi_sectors.csv' table='[fdi_sectors#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Sector' ordinal='0' />
+              <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+              <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0wy0b6x08yxfjx19s6x810m6bpdl' name='fdi_years.csv' table='[fdi_years#csv]' type='table'>
+            <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Year' ordinal='0' />
+              <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+              <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <cols>
+          <map key='[FDI in INR (Crores) (fdi_years.csv)]' value='[fdi_years.csv].[FDI in INR (Crores)]' />
+          <map key='[FDI in INR (Crores)]' value='[fdi_sectors.csv].[FDI in INR (Crores)]' />
+          <map key='[FDI in USD (Millions) (fdi_years.csv)]' value='[fdi_years.csv].[FDI in USD (Millions)]' />
+          <map key='[FDI in USD (Millions)]' value='[fdi_sectors.csv].[FDI in USD (Millions)]' />
+          <map key='[Sector]' value='[fdi_sectors.csv].[Sector]' />
+          <map key='[Year]' value='[fdi_years.csv].[Year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in USD (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in USD (Millions)]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>FDI in USD (Millions)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in INR (Crores)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in INR (Crores)]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>FDI in INR (Crores)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[Year]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in USD (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in USD (Millions) (fdi_years.csv)]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>FDI in USD (Millions)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in INR (Crores)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in INR (Crores) (fdi_years.csv)]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>FDI in INR (Crores)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='FDI in INR (Crores) (fdi years.csv)' datatype='real' name='[FDI in INR (Crores) (fdi_years.csv)]' role='measure' type='quantitative' />
+      <column caption='FDI in USD (Millions) (fdi years.csv)' datatype='real' name='[FDI in USD (Millions) (fdi_years.csv)]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fdi_sectors.csv' datatype='table' name='[__tableau_internal_object_id__].[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fdi_years.csv' datatype='table' name='[__tableau_internal_object_id__].[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/VEDANS~1/AppData/Local/Temp/TableauTemp/#TableauTemp_0lrp83i0uw1b8e119es0x13gj0rv.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/23/2024 04:12:37 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19' table='[Extract].[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19' table='[Extract].[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]' type='table' />
+            <relation name='fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C' table='[Extract].[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <cols>
+            <map key='[FDI in INR (Crores) (fdi_years.csv)]' value='[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C].[FDI in INR (Crores)]' />
+            <map key='[FDI in INR (Crores)]' value='[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19].[FDI in INR (Crores)]' />
+            <map key='[FDI in USD (Millions) (fdi_years.csv)]' value='[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C].[FDI in USD (Millions)]' />
+            <map key='[FDI in USD (Millions)]' value='[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19].[FDI in USD (Millions)]' />
+            <map key='[Sector]' value='[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19].[Sector]' />
+            <map key='[Year]' value='[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C].[Year]' />
+          </cols>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='fdi_sectors.csv' id='fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19'>
+            <properties context=''>
+              <relation connection='textscan.0wy0b6x08yxfjx19s6x810m6bpdl' name='fdi_sectors.csv' table='[fdi_sectors#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Sector' ordinal='0' />
+                  <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+                  <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19' table='[Extract].[fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19]' type='table' />
+            </properties>
+          </object>
+          <object caption='fdi_years.csv' id='fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C'>
+            <properties context=''>
+              <relation connection='textscan.0wy0b6x08yxfjx19s6x810m6bpdl' name='fdi_years.csv' table='[fdi_years#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Year' ordinal='0' />
+                  <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+                  <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C' table='[Extract].[fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[FDI in USD (Millions)]' />
+                <expression op='[FDI in USD (Millions) (fdi_years.csv)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[FDI in INR (Crores)]' />
+                <expression op='[FDI in INR (Crores) (fdi_years.csv)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='fdi_sectors.csv_4004F1FAA03A427CB68DF7DA25E0DA19' />
+            <second-end-point object-id='fdi_years.csv_334FD079BB0D43F7B3E6A6ABECFDF93C' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='fdi_sectors+' inline='true' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fdi_sectors' name='textscan.0s2bqai1hupxa815zfn781dta44v'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/Vedansh Chauhan/Documents/I2/Project 5/fdi_sectors.csv' dataRefreshTime='' directory='C:/Users/Vedansh Chauhan/Documents/I2/Project 5' filename='C:/Users/VEDANS~1/AppData/Local/Temp/TableauTemp/1kp37s20o3wbpp15z061v1tvp7p8/fdi_sectors.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0s2bqai1hupxa815zfn781dta44v' name='fdi_sectors.csv' table='[fdi_sectors#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:C64:no:A1:C64:1' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Sector' ordinal='0' />
+            <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+            <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0s2bqai1hupxa815zfn781dta44v' name='fdi_sectors.csv' table='[fdi_sectors#csv$]' type='table'>
+            <columns character-set='UTF-8' gridOrigin='A1:C64:no:A1:C64:1' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Sector' ordinal='0' />
+              <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+              <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0s2bqai1hupxa815zfn781dta44v' name='fdi_years.csv' table='[fdi_years#csv$]' type='table'>
+            <columns character-set='UTF-8' gridOrigin='A1:C19:no:A1:C19:2' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Year Year' ordinal='0' />
+              <column datatype='real' name='FDI in USD (Millions) FDI in USD (Millions)' ordinal='1' />
+              <column datatype='real' name='FDI in INR (Crores) FDI in INR (Crores)' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C64:no:A1:C64:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>126</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C19:no:A1:C19:2&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>34</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in USD (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in USD (Millions)]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>FDI in USD (Millions)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in INR (Crores)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in INR (Crores)]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>FDI in INR (Crores)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year Year]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>Year Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in USD (Millions) FDI in USD (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in USD (Millions) FDI in USD (Millions)]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>FDI in USD (Millions) FDI in USD (Millions)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in INR (Crores) FDI in INR (Crores)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in INR (Crores) FDI in INR (Crores)]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>FDI in INR (Crores) FDI in INR (Crores)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total FDI in INR' datatype='real' name='[Calculation_601512063894855680]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([FDI in INR (Crores)])' />
+      </column>
+      <column caption='Total FDI in USD' datatype='real' name='[Calculation_601512063895121921]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([FDI in USD (Millions)])' />
+      </column>
+      <column caption='Number of Sectors' datatype='integer' name='[Calculation_601512063895511042]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='COUNTD([Sector])' />
+      </column>
+      <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+      <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+      <_.fcp.ObjectModelTableType.true...column caption='fdi_sectors.csv' datatype='table' name='[__tableau_internal_object_id__].[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fdi_years.csv' datatype='table' name='[__tableau_internal_object_id__].[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]' role='measure' type='quantitative' />
+      <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/VEDANS~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1dp4suk1kxvu6v1b8ruwk09yryi5.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/29/2024 04:32:01 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6' table='[Extract].[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6' table='[Extract].[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]' type='table' />
+            <relation name='fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D' table='[Extract].[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Sector</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sector]</local-name>
+              <parent-name>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</parent-name>
+              <remote-alias>Sector</remote-alias>
+              <ordinal>0</ordinal>
+              <family>fdi_sectors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in USD (Millions)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in USD (Millions)]</local-name>
+              <parent-name>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</parent-name>
+              <remote-alias>FDI in USD (Millions)</remote-alias>
+              <ordinal>1</ordinal>
+              <family>fdi_sectors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in INR (Crores)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in INR (Crores)]</local-name>
+              <parent-name>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</parent-name>
+              <remote-alias>FDI in INR (Crores)</remote-alias>
+              <ordinal>2</ordinal>
+              <family>fdi_sectors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year Year]</local-name>
+              <parent-name>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</parent-name>
+              <remote-alias>Year Year</remote-alias>
+              <ordinal>3</ordinal>
+              <family>fdi_years.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in USD (Millions) FDI in USD (Millions)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in USD (Millions) FDI in USD (Millions)]</local-name>
+              <parent-name>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</parent-name>
+              <remote-alias>FDI in USD (Millions) FDI in USD (Millions)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>fdi_years.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in INR (Crores) FDI in INR (Crores)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in INR (Crores) FDI in INR (Crores)]</local-name>
+              <parent-name>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</parent-name>
+              <remote-alias>FDI in INR (Crores) FDI in INR (Crores)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>fdi_years.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Sector:nk]' type='palette'>
+            <map to='#499894'>
+              <bucket>&quot;COAL PRODUCTION&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;HOSPITAL &amp; DIAGNOSTIC CENTRES&quot;</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>&quot;PRINTING OF BOOKS&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;AGRICULTURAL MACHINERY&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;EDUCATION&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;MISCELLANEOUS MECHANICAL &amp; ENGINEERING INDUSTRIES&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;TIMBER PRODUCTS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;BOILERS AND STEAM GENERATING PLANTS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;FERTILIZERS&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;PHOTOGRAPHIC RAW FILM AND PAPER&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;CONSTRUCTION  ACTIVITIES&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;INFORMATION &amp; BROADCASTING&quot;</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>&quot;SCIENTIFIC INSTRUMENTS&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;COIR&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;HOTEL &amp; TOURISM&quot;</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>&quot;RAILWAY RELATED COMPONENTS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;CEMENT AND GYPSUM PRODUCTS&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;FOOD PROCESSING INDUSTRIES&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;PORTS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;DYE-STUFFS&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;MINING&quot;</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>&quot;TELECOMMUNICATIONS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;AGRICULTURE SERVICES&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;ELECTRICAL EQUIPMENTS&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;NON-CONVENTIONAL ENERGY&quot;</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>&quot;TRADING&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;DIAMOND,GOLD ORNAMENTS&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;MEDICAL AND SURGICAL APPLIANCES&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;SUGAR&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;CERAMICS&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;GLASS&quot;</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>&quot;POWER&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;CONSTRUCTION DEVELOPMENT&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;LEATHER,LEATHER GOODS AND PICKERS&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;SEA TRANSPORT&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;CONSULTANCY SERVICES&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;MACHINE TOOLS&quot;</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>&quot;SERVICES SECTOR&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;DRUGS &amp; PHARMACEUTICALS&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;METALLURGICAL INDUSTRIES&quot;</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>&quot;TEA AND COFFEE&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;EARTH-MOVING MACHINERY&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;MISCELLANEOUS INDUSTRIES&quot;</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>&quot;TEXTILES&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;COMMERCIAL, OFFICE &amp; HOUSEHOLD EQUIPMENTS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;INDUSTRIAL INSTRUMENTS&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;RETAIL TRADING&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;CHEMICALS&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;GLUE AND GELATIN&quot;</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>&quot;PRIME MOVER&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;AIR TRANSPORT&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;ELECTRONICS&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;PAPER AND PULP&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;VEGETABLE OILS AND VANASPATI&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;DEFENCE INDUSTRIES&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;MATHEMATICAL,SURVEYING AND DRAWING INSTRUMENTS&quot;</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>&quot;SOAPS, COSMETICS &amp; TOILET PREPARATIONS&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;COMPUTER SOFTWARE &amp; HARDWARE&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;INDUSTRIAL MACHINERY&quot;</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>&quot;RUBBER GOODS&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;AUTOMOBILE INDUSTRY&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;FERMENTATION INDUSTRIES&quot;</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>&quot;PETROLEUM &amp; NATURAL GAS&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='fdi_sectors.csv' id='fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6'>
+            <properties context=''>
+              <relation connection='textscan.0s2bqai1hupxa815zfn781dta44v' name='fdi_sectors.csv' table='[fdi_sectors#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:C64:no:A1:C64:1' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Sector' ordinal='0' />
+                  <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+                  <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6' table='[Extract].[fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6]' type='table' />
+            </properties>
+          </object>
+          <object caption='fdi_years.csv' id='fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D'>
+            <properties context=''>
+              <relation connection='textscan.0s2bqai1hupxa815zfn781dta44v' name='fdi_years.csv' table='[fdi_years#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:C19:no:A1:C19:2' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Year Year' ordinal='0' />
+                  <column datatype='real' name='FDI in USD (Millions) FDI in USD (Millions)' ordinal='1' />
+                  <column datatype='real' name='FDI in INR (Crores) FDI in INR (Crores)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D' table='[Extract].[fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[FDI in USD (Millions)]' />
+                <expression op='[FDI in USD (Millions) FDI in USD (Millions)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[FDI in INR (Crores)]' />
+                <expression op='[FDI in INR (Crores) FDI in INR (Crores)]' />
+              </expression>
+            </expression>
+            <first-end-point guaranteed-value='true' object-id='fdi_sectors.csv_44CB1B640F42422CB606C0289D8407B6' unique-key='true' />
+            <second-end-point guaranteed-value='true' object-id='fdi_years.csv_E01D2B0D13A34CF4A4844F0A60388A6D' unique-key='true' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+    <datasource caption='fdi_sectors+ (3)' inline='true' name='federated.0sfkrpb04xtgex11y9ow21tggz7g' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='fdi_sectors' name='textscan.0mypiq10hrg1nz1akcr430t1s9ok'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='C:/Users/Vedansh Chauhan/Documents/I2/Project 5/fdi_sectors.csv' dataRefreshTime='' directory='C:/Users/Vedansh Chauhan/Documents/I2/Project 5' filename='C:/Users/VEDANS~1/AppData/Local/Temp/TableauTemp/1kp37s20o3wbpp15z061v1tvp7p8/fdi_sectors.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <_.fcp.ObjectModelEncapsulateLegacy.false...relation connection='textscan.0mypiq10hrg1nz1akcr430t1s9ok' name='fdi_sectors.csv' table='[fdi_sectors#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:C64:no:A1:C64:1' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='Sector' ordinal='0' />
+            <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+            <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+          </columns>
+        </_.fcp.ObjectModelEncapsulateLegacy.false...relation>
+        <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+          <relation connection='textscan.0mypiq10hrg1nz1akcr430t1s9ok' name='fdi_sectors.csv' table='[fdi_sectors#csv$]' type='table'>
+            <columns character-set='UTF-8' gridOrigin='A1:C64:no:A1:C64:1' header='yes' locale='en_IN' separator=','>
+              <column datatype='string' name='Sector' ordinal='0' />
+              <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+              <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+            </columns>
+          </relation>
+          <relation connection='textscan.0mypiq10hrg1nz1akcr430t1s9ok' name='fdi_years.csv' table='[fdi_years#csv$]' type='table'>
+            <columns gridOrigin='A1:C19:no:A1:C19:2'>
+              <column datatype='string' name='Year Year' ordinal='0' />
+              <column datatype='real' name='FDI in USD (Millions) FDI in USD (Millions)' ordinal='1' />
+              <column datatype='real' name='FDI in INR (Crores) FDI in INR (Crores)' ordinal='2' />
+            </columns>
+          </relation>
+        </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>2</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C64:no:A1:C64:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>126</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:C19:no:A1:C19:2&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>34</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Sector</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Sector]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>Sector</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in USD (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in USD (Millions)]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>FDI in USD (Millions)</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in INR (Crores)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in INR (Crores)]</local-name>
+            <parent-name>[fdi_sectors.csv]</parent-name>
+            <remote-alias>FDI in INR (Crores)</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Year Year</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Year Year]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>Year Year</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_8506309591444784920267928569B676]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in USD (Millions) FDI in USD (Millions)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in USD (Millions) FDI in USD (Millions)]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>FDI in USD (Millions) FDI in USD (Millions)</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_8506309591444784920267928569B676]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>FDI in INR (Crores) FDI in INR (Crores)</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[FDI in INR (Crores) FDI in INR (Crores)]</local-name>
+            <parent-name>[fdi_years.csv]</parent-name>
+            <remote-alias>FDI in INR (Crores) FDI in INR (Crores)</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <_.fcp.ObjectModelEncapsulateLegacy.true...object-id>[fdi_years.csv_8506309591444784920267928569B676]</_.fcp.ObjectModelEncapsulateLegacy.true...object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <_.fcp.ObjectModelTableType.true...column caption='fdi_sectors.csv' datatype='table' name='[__tableau_internal_object_id__].[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]' role='measure' type='quantitative' />
+      <_.fcp.ObjectModelTableType.true...column caption='fdi_years.csv' datatype='table' name='[__tableau_internal_object_id__].[fdi_years.csv_8506309591444784920267928569B676]' role='measure' type='quantitative' />
+      <extract _.fcp.ObjectModelExtractV2.true...object-id='' _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/VEDANS~1/AppData/Local/Temp/TableauTemp/#TableauTemp_1x66bjm0r23vc115p1ova1bngvp9.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='07/29/2024 04:33:00 AM' username='tableau_internal_user'>
+          <_.fcp.ObjectModelEncapsulateLegacy.false...relation name='fdi_sectors.csv_E63EC77F6E1F496989463D410575441C' table='[Extract].[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]' type='table' />
+          <_.fcp.ObjectModelEncapsulateLegacy.true...relation type='collection'>
+            <relation name='fdi_sectors.csv_E63EC77F6E1F496989463D410575441C' table='[Extract].[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]' type='table' />
+            <relation name='fdi_years.csv_8506309591444784920267928569B676' table='[Extract].[fdi_years.csv_8506309591444784920267928569B676]' type='table' />
+          </_.fcp.ObjectModelEncapsulateLegacy.true...relation>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Sector</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Sector]</local-name>
+              <parent-name>[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]</parent-name>
+              <remote-alias>Sector</remote-alias>
+              <ordinal>0</ordinal>
+              <family>fdi_sectors.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in USD (Millions)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in USD (Millions)]</local-name>
+              <parent-name>[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]</parent-name>
+              <remote-alias>FDI in USD (Millions)</remote-alias>
+              <ordinal>1</ordinal>
+              <family>fdi_sectors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in INR (Crores)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in INR (Crores)]</local-name>
+              <parent-name>[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]</parent-name>
+              <remote-alias>FDI in INR (Crores)</remote-alias>
+              <ordinal>2</ordinal>
+              <family>fdi_sectors.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>63</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Year Year</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Year Year]</local-name>
+              <parent-name>[fdi_years.csv_8506309591444784920267928569B676]</parent-name>
+              <remote-alias>Year Year</remote-alias>
+              <ordinal>3</ordinal>
+              <family>fdi_years.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in USD (Millions) FDI in USD (Millions)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in USD (Millions) FDI in USD (Millions)]</local-name>
+              <parent-name>[fdi_years.csv_8506309591444784920267928569B676]</parent-name>
+              <remote-alias>FDI in USD (Millions) FDI in USD (Millions)</remote-alias>
+              <ordinal>4</ordinal>
+              <family>fdi_years.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>FDI in INR (Crores) FDI in INR (Crores)</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[FDI in INR (Crores) FDI in INR (Crores)]</local-name>
+              <parent-name>[fdi_years.csv_8506309591444784920267928569B676]</parent-name>
+              <remote-alias>FDI in INR (Crores) FDI in INR (Crores)</remote-alias>
+              <ordinal>5</ordinal>
+              <family>fdi_years.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>17</approx-count>
+              <contains-null>true</contains-null>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+        <objects>
+          <object caption='fdi_sectors.csv' id='fdi_sectors.csv_E63EC77F6E1F496989463D410575441C'>
+            <properties context=''>
+              <relation connection='textscan.0mypiq10hrg1nz1akcr430t1s9ok' name='fdi_sectors.csv' table='[fdi_sectors#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:C64:no:A1:C64:1' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='Sector' ordinal='0' />
+                  <column datatype='real' name='FDI in USD (Millions)' ordinal='1' />
+                  <column datatype='real' name='FDI in INR (Crores)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='fdi_sectors.csv_E63EC77F6E1F496989463D410575441C' table='[Extract].[fdi_sectors.csv_E63EC77F6E1F496989463D410575441C]' type='table' />
+            </properties>
+          </object>
+          <object caption='fdi_years.csv' id='fdi_years.csv_8506309591444784920267928569B676'>
+            <properties context=''>
+              <relation connection='textscan.0mypiq10hrg1nz1akcr430t1s9ok' name='fdi_years.csv' table='[fdi_years#csv$]' type='table'>
+                <columns gridOrigin='A1:C19:no:A1:C19:2'>
+                  <column datatype='string' name='Year Year' ordinal='0' />
+                  <column datatype='real' name='FDI in USD (Millions) FDI in USD (Millions)' ordinal='1' />
+                  <column datatype='real' name='FDI in INR (Crores) FDI in INR (Crores)' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='fdi_years.csv_8506309591444784920267928569B676' table='[Extract].[fdi_years.csv_8506309591444784920267928569B676]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='AND'>
+              <expression op='='>
+                <expression op='[FDI in INR (Crores)]' />
+                <expression op='[FDI in INR (Crores) FDI in INR (Crores)]' />
+              </expression>
+              <expression op='='>
+                <expression op='[FDI in USD (Millions)]' />
+                <expression op='[FDI in USD (Millions) FDI in USD (Millions)]' />
+              </expression>
+            </expression>
+            <first-end-point object-id='fdi_sectors.csv_E63EC77F6E1F496989463D410575441C' />
+            <second-end-point object-id='fdi_years.csv_8506309591444784920267928569B676' />
+          </relationship>
+        </relationships>
+      </_.fcp.ObjectModelEncapsulateLegacy.true...object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='No. of Sectors'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Number of Sectors</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+            <column caption='Number of Sectors' datatype='integer' name='[Calculation_601512063895511042]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='COUNTD([Sector])' />
+            </column>
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+            <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_601512063895511042]' derivation='User' name='[usr:Calculation_601512063895511042:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]'>
+            <groupfilter function='level-members' level='[none:Year Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='36' />
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#faf5f0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='18' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-weight' value='normal' />
+            <format attr='background-color' value='#f5ead7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[usr:Calculation_601512063895511042:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{05841928-EDBB-465D-8E1E-B2FCC3BF0D31}' />
+    </worksheet>
+    <worksheet name='Sector highest'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Top 10 sector-wise FDI in India in INR</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+            <column datatype='real' name='[FDI in INR (Crores)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FDI in INR (Crores)]' derivation='Sum' name='[sum:FDI in INR (Crores):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([FDI in INR (Crores)])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Sector:nk]' />
+                  <groupfilter function='member' level='[none:Sector:nk]' member='%null%' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]'>
+            <groupfilter function='level-members' level='[none:Year Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]</column>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' scope='cols' value='' />
+            <format attr='display' class='0' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' value='8' />
+            <format attr='text-format' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' value='c&quot;₹&quot;#,##0.0;&quot;₹&quot;-#,##0.0' />
+            <format attr='font-size' data-class='subtotal' value='8' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' value='328' />
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' value='off' />
+            <format attr='text-format' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' value='c&quot;₹ &quot;0,K;&quot;₹ &quot;-0,K' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#00000000' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f2f9f9' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='8' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-weight' value='normal' />
+            <format attr='background-color' value='#dfe7e8' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' />
+              <text column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='697' />
+                <format attr='maxwidth' value='697' />
+                <format attr='minheight' value='200' />
+                <format attr='maxheight' value='200' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]</rows>
+        <cols>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]</cols>
+      </table>
+      <simple-id uuid='{629FC290-F0BF-471A-B11B-EDCBEEF17A81}' />
+    </worksheet>
+    <worksheet name='Sector lowest'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Lowest 10 sector-wise FDI in India in INR</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+            <column datatype='real' name='[FDI in INR (Crores)]' role='measure' type='quantitative' />
+            <column datatype='string' name='[Sector]' role='dimension' type='nominal' />
+            <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+            <column-instance column='[Sector]' derivation='None' name='[none:Sector:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FDI in INR (Crores)]' derivation='Sum' name='[sum:FDI in INR (Crores):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]'>
+            <groupfilter count='10' end='bottom' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([FDI in INR (Crores)])' function='order' user:ui-marker='order'>
+                <groupfilter function='except' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+                  <groupfilter function='level-members' level='[none:Sector:nk]' />
+                  <groupfilter function='member' level='[none:Sector:nk]' member='%null%' />
+                </groupfilter>
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]'>
+            <groupfilter function='level-members' level='[none:Year Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' direction='ASC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]</column>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' scope='cols' value='' />
+            <format attr='display' class='0' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' value='8' />
+            <format attr='text-format' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' value='c&quot;₹&quot;#,##0.0;&quot;₹&quot;-#,##0.0' />
+            <format attr='cell-w' value='60' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+            <format attr='font-style' data-class='subtotal' value='normal' />
+            <format attr='font-size' data-class='subtotal' value='8' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' value='328' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='wrap' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' value='off' />
+            <format attr='text-format' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' value='c&quot;₹ &quot;0,K;&quot;₹ &quot;-0,K' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#f0f3fa' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='8' />
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e2e6f0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]' />
+              <text column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='696' />
+                <format attr='maxwidth' value='696' />
+                <format attr='minheight' value='200' />
+                <format attr='maxheight' value='200' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Sector:nk]</rows>
+        <cols>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]</cols>
+      </table>
+      <simple-id uuid='{488427E8-8DD4-4D79-BD31-715DDB44D314}' />
+    </worksheet>
+    <worksheet name='Total Inflow INR'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Total Inflow in INR (Crores)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+            <column caption='Total FDI in INR' datatype='real' name='[Calculation_601512063894855680]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([FDI in INR (Crores)])' />
+            </column>
+            <column datatype='real' name='[FDI in INR (Crores)]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+            <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_601512063894855680]' derivation='User' name='[usr:Calculation_601512063894855680:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[:Measure Names]'>
+            <groupfilter function='level-members' level='[:Measure Names]' />
+          </filter>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]'>
+            <groupfilter function='level-members' level='[none:Year Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[:Measure Names]</column>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='bold' />
+            <format attr='text-format' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[usr:Calculation_601512063894855680:qk]' value='c&quot;₹&quot;#,##0.00;&quot;₹&quot;-#,##0.00' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf5f0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='12' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='font-weight' value='normal' />
+            <format attr='background-color' value='#f5ead7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[usr:Calculation_601512063894855680:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7269DB19-6E35-4006-91A0-4FDDE4472F3F}' />
+    </worksheet>
+    <worksheet name='Total Inflow USD'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontsize='10'>Total Inflow in USD (Millions)</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+            <column caption='Total FDI in USD' datatype='real' name='[Calculation_601512063895121921]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([FDI in USD (Millions)])' />
+            </column>
+            <column datatype='real' name='[FDI in USD (Millions)]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+            <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Calculation_601512063895121921]' derivation='User' name='[usr:Calculation_601512063895121921:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]'>
+            <groupfilter function='level-members' level='[none:Year Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='height' value='41' />
+            <format attr='font-family' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[usr:Calculation_601512063895121921:qk]' value='Tableau Book' />
+            <format attr='text-align' value='center' />
+            <format attr='font-size' value='16' />
+            <format attr='font-weight' value='bold' />
+            <format attr='text-format' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[usr:Calculation_601512063895121921:qk]' value='c&quot;$&quot;#,##0.00' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='text-align' data-class='subtotal' value='auto' />
+            <format attr='text-align' data-class='total' value='auto' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-align' value='auto' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' value='#faf5f0' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf5f0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-size' value='18' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#f5ead7' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[usr:Calculation_601512063895121921:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+        <tooltip-style tooltip-mode='none' />
+      </table>
+      <simple-id uuid='{C45FDEE9-A03C-4CC3-9FED-58083DAAFED8}' />
+    </worksheet>
+    <worksheet name='Trend INR'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1'>Æ&#10;</run>
+            <run bold='true' fontalignment='1' fontsize='10'>Trend of FDI in India in INR (Crores) </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+            <column datatype='real' name='[FDI in INR (Crores)]' role='measure' type='quantitative' />
+            <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+            <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+            <column-instance column='[FDI in INR (Crores)]' derivation='Sum' name='[sum:FDI in INR (Crores):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]'>
+            <groupfilter function='level-members' level='[none:Year Year:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='height' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' value='65' />
+            <format attr='title' class='0' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' value='64' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-width' scope='cols' value='0' />
+            <format attr='border-style' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-orientation' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' value='-90' />
+            <format attr='wrap' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' value='off' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-width' data-class='subtotal' scope='cols' value='0' />
+            <format attr='border-style' data-class='subtotal' scope='cols' value='none' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='band-size' scope='rows' value='0' />
+            <format attr='background-color' value='#f7faf0' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='title'>
+            <format attr='background-color' value='#e8edda' />
+          </style-rule>
+          <style-rule element='quick-filter'>
+            <format attr='title' field='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' value='Year'>
+              <formatted-text>
+                <run fontalignment='1'>Year</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <text column='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run fontcolor='#787878'>Year:&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>FDI in INR (Crores):&#9;</run>
+                <run bold='true'><![CDATA[<[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores) (fdi_years.csv):qk]>]]></run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='wrap' value='auto' />
+                <format attr='vertical-align' value='auto' />
+                <format attr='text-align' value='auto' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-size' value='8' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='2' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='1088' />
+                <format attr='maxwidth' value='1088' />
+                <format attr='minheight' value='565' />
+                <format attr='maxheight' value='565' />
+                <format attr='aspect' value='0' />
+                <format attr='minwidth' value='1088' />
+                <format attr='maxwidth' value='1088' />
+                <format attr='minheight' value='565' />
+                <format attr='maxheight' value='565' />
+                <format attr='aspect' value='0' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]</rows>
+        <cols>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]</cols>
+      </table>
+      <simple-id uuid='{290C9F38-2B18-4DB9-B6FA-3CFD1C7BDB4C}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard _.fcp.AccessibleZoneTabOrder.true...enable-sort-zone-taborder='true' name='FDI Dashboard'>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#00000000' />
+        </style-rule>
+        <style-rule element='dash-title'>
+          <format attr='text-align' value='center' />
+          <format attr='border-style' value='solid' />
+          <format attr='background-color' value='#efebe8' />
+        </style-rule>
+        <style-rule element='dash-text'>
+          <format attr='text-align' value='center' />
+        </style-rule>
+      </style>
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource caption='fdi_sectors+' name='federated.1f1ognk0dhpmzj199o0dr131s2sv' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1f1ognk0dhpmzj199o0dr131s2sv'>
+        <column caption='Year' datatype='string' name='[Year Year]' role='dimension' type='nominal' />
+        <column-instance column='[Year Year]' derivation='None' name='[none:Year Year:nk]' pivot='key' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='37' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98002' id='42' param='vert' type-v2='layout-flow' w='99034' x='483' y='999' />
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='80275' id='14' param='horz' type-v2='layout-flow' w='98183' x='969' y='18477'>
+          <zone fixed-size='924' h='80275' id='25' is-fixed='true' param='horz' type-v2='layout-flow' w='98183' x='969' y='18477'>
+            <zone fixed-size='995' h='80275' id='26' is-fixed='true' name='Trend INR' w='60531' x='969' y='18477'>
+              <layout-cache has-max-size-h='true' maxheight='704' minheight='704' type-h='scalable' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone friendly-name='Top10' h='80275' id='34' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='37652' x='61500' y='18477'>
+              <zone h='40200' id='35' name='Sector highest' w='37658' x='61497' y='18477'>
+                <layout-cache cell-count-h='10' has-max-size-w='true' maxwidth='1025' minwidth='1025' non-cell-size-h='39' type-h='cell' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='40075' id='36' name='Sector lowest' w='37658' x='61497' y='58677'>
+                <layout-cache cell-count-h='10' has-max-size-w='true' maxwidth='1024' minwidth='1024' non-cell-size-h='39' type-h='cell' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+        </zone>
+        <zone h='16479' id='43' param='horz' type-v2='layout-flow' w='97465' x='1328' y='1373'>
+          <zone forceUpdate='true' h='16479' id='44' type-v2='text' w='51237' x='1328' y='1373'>
+            <formatted-text>
+              <run bold='true' fontcolor='#000000' fontname='Tableau Bold' fontsize='18'>Foreign Direct Investments in India Analysis (2000-17)</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+              <format attr='background-color' value='#f3ebf3' />
+            </zone-style>
+          </zone>
+          <zone fixed-size='766' friendly-name='Metrics' h='16479' id='45' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='46228' x='52565' y='1373'>
+            <zone h='16480' id='46' name='Total Inflow INR' w='15449' x='52565' y='1373'>
+              <layout-cache cell-count-w='1' fixed-size-h='100' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='16480' id='47' name='Total Inflow USD' w='15390' x='68014' y='1373'>
+              <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='16480' id='48' name='No. of Sectors' w='15389' x='83404' y='1373'>
+              <layout-cache cell-count-w='1' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+        </zone>
+        <zone fixed-size='155' h='7241' id='32' is-fixed='true' mode='checkdropdown' name='Trend INR' param='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' type-v2='filter' w='9596' x='4647' y='28215' />
+      </zones>
+      <simple-id uuid='{B6EDF604-1D74-41A3-8240-5763764069A8}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='89'>
+    <window class='worksheet' name='Total Inflow INR'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1AC3AE91-BCD8-4E83-96B3-8617C0065A65}' />
+    </window>
+    <window class='worksheet' name='Total Inflow USD'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{82707C1B-4FDD-4C77-99FB-0497249BAB3D}' />
+    </window>
+    <window class='worksheet' name='No. of Sectors'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{1FDF7442-ACE2-46C4-BD87-1949B76E5D13}' />
+    </window>
+    <window class='worksheet' name='Trend INR'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card mode='checkdropdown' param='[federated.1f1ognk0dhpmzj199o0dr131s2sv].[none:Year Year:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <floating-toolbar-visibility value='2' />
+      </viewpoint>
+      <simple-id uuid='{B5C3B4A4-291F-4CF2-A86F-8A1F452BC78A}' />
+    </window>
+    <window class='worksheet' name='Sector highest'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{405861CF-D1CE-4E30-8C34-B4D2C7C73612}' />
+    </window>
+    <window class='worksheet' name='Sector lowest'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{42A747FE-A4D2-40E2-A56A-59FD05D2A8BA}' />
+    </window>
+    <window class='dashboard' maximized='true' name='FDI Dashboard'>
+      <viewpoints>
+        <viewpoint name='No. of Sectors'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sector highest'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Sector lowest'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Inflow INR'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Inflow USD'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Trend INR'>
+          <zoom type='entire-view' />
+          <selection-collection>
+            <node-selection select-tuples='false'>
+              <oriented-node-reference orientation='vertical'>
+                <node-reference>
+                  <axis>[federated.1f1ognk0dhpmzj199o0dr131s2sv].[sum:FDI in INR (Crores):qk]</axis>
+                </node-reference>
+                <page-reference />
+              </oriented-node-reference>
+            </node-selection>
+          </selection-collection>
+          <floating-toolbar-visibility value='2' />
+        </viewpoint>
+      </viewpoints>
+      <active id='36' />
+      <device-preview selected='Desktop' />
+      <simple-id uuid='{98363BA1-F4C6-488C-9DD5-15DE58806DE3}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='FDI Dashboard' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='40' name='No. of Sectors' width='64'>
+      iVBORw0KGgoAAAANSUhEUgAAAEAAAAAoCAYAAABOzvzpAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAFAklEQVRoge2Ze1CUVRjGf3wuA7ILrOMuYAKS3JxJQVOEtFGJMS+IaI5ll6lxapocnMix
+      chxrNHEwTM1GazIvhJGal/BGIKJIl9EUxEDMRGxSvMDuKrvrLmwsZ/uDZGzk4josXzPu8/cz
+      z/ec57zn7Pue9XA4HA4eYUhyG5Ab7gDkNiA33AHIbUBuuAOQ24DcUHRHaLEae8OHbHjkK8Ad
+      gNwG5IY7ALkNyA13AHIbkBvuAOQ2IDe67QR7Eg06Hdt37uZ46U/o9HqEECiVPgQPHEjylElM
+      TEpErVa384UQVJ6rpvDwEcrKz9Cg09PS0gKAUulDdFQUs2amMmHc00jSw+2lR3dPYj3RCgvh
+      YMeu3Wze+jXNzbZOea/PfZU35r4GgMFgIC19IX9dudqtfmREOKsyMwgKCnTaW69UQO72HWzc
+      nI0QgsjICNLT3iJm2DA8PRVYLFbKKyrYted7+tyzi61C0NTUjFqtZmJSIslTJhE2KBQvLy+E
+      ENTVXSN7Wy5FxceouVTLRytWsjorE6XSxylvLq+A6vO/s+C9xZjNZuLjRpGx7AN8fX075Nrt
+      dhSKtj2xWKxcuHiREbExnZa3EA4+WbuOfQcO4eXlxeqPVzBq5JNO+XPpJSiEg30HDmE2m9H0
+      78+C9LROFw+0Lx7azvjIEcO7PNuS5EHcvwu22WyYTGanPbo0AJ1Ox+nyMwAkxMcREhzS4984
+      f+EPAPz9/AgNdV7fpXdA7eXLGAy3kCSJsWMSkCSPHtMWwkFJaSl5+w8CMHZMAmGDQp3WcWkA
+      F2tqsdvt+KpU9FP34+dfTnAwv4DfKqswmkxIkoRWo2Fa8mTmzJ6FSqXqUq+lxU6DTkdZ+Rn2
+      5u2n9vKfAMxMTeHttHn/OUIPCpdegkuWLudYSSkAfn6+JI4fx6wZ0wkLC8PTU4Feb+CrLdnk
+      FxxGCEFIcDCfrc1iQFBQu4bFYuWddxdxrvr8ffoaTX9SU5IfKLzO4NIAli7PpKj4KAFaLZu+
+      XE+AVnsfRwgHW3O2kZ2TixCC+fPe5OUXX+hQTwiBTm/gXHU1efsPUnG2EiEEan9/PlyyiDEJ
+      8U57dOklGBIyEACL1UJDg65jA5IHKVOnoNVqAKg4W4ndbu+EKxEYoCUpcQIb1q1hy8bPCQoK
+      pNFoJCNzFTU1l5z26NIA7u54U1MzeoOhU55KpUKraQvAaDJhs/39QPpDoqNY/P5C+np709jY
+      SH5hkdMeXRrA4MfDUCp9EEJw4uQpl3wjbFBoe29RX9+AEM792e3SAMLDBxMdFQVAWXkF12/c
+      7JB36/ZtbtbXA/DYgAFOtbOtra04aFu01Edy+qfWpQH09fYmNWUqCoWC6zdusGlLdvs0dxdC
+      OCgoLEKvN6BQKEh6ZjwABw79wNW6a13qC+Egv+AwBsMtAGKGPuG0R5cPQ4njx3Hi5CkKi4op
+      Kj6G0WQiff48QoJDuHPnDjt37eHbHd8Bbd3iU/GjAfj1dBlZqz8lKjKCGdOnMTpuJIEBAUiS
+      1D4M5eRup7CoGCEEsTFDmTr5Waf99co4bLVaycxaQ0npjwghOuSMGB5LZsZS1P7+AKxb/wW7
+      9+Z1yr8XQ6KjWJmx7KHG4V4JANrKtbKqiq0531BZVY3NZsPT05OI8MG88tKcDh81GhsbOXK0
+      hKMlx7lytQ6j0dQeiL+fH7Exw3h+9nNdTozdodcC+L/ikX8TdAcgtwG58Q8v7/2qPqKCBwAA
+      AABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sector lowest' width='192'>
+      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
+      rAmRAQAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='41' name='Total Inflow INR' width='192'>
+      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
+      gg==
+    </thumbnail>
+    <thumbnail height='45' name='Total Inflow USD' width='184'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Trend INR' width='192'>
+      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
+      QmCC
+    </thumbnail>
+  </thumbnails>
+</workbook>
